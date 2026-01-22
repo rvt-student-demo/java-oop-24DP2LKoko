@@ -1,9 +1,9 @@
 import java.util.ArrayList;
 
-public class TodoList {
+public class Todolist {
     private ArrayList<String> todos;
     
-    public TodoList(){
+    public Todolist(){
         this.todos = new ArrayList<String>();
     }
     

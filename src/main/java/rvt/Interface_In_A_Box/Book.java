@@ -1,3 +1,4 @@
+package main.java.rvt.Interface_In_A_Box;
 public class Book implements Packable{
 
     private String author;

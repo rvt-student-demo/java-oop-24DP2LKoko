@@ -1,3 +1,4 @@
+package main.java.rvt.Interface_In_A_Box;
 public class CD implements Packable {
     private String artist;
     private String name;

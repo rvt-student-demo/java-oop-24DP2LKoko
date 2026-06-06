@@ -1,22 +1,24 @@
-import java.util.ArrayList;
+import java.util.List;
 
 public class Todolist {
-    private ArrayList<String> todos;
-    
-    public Todolist(){
-        this.todos = new ArrayList<String>();
+
+    private TodoDB db;
+
+    public Todolist() {
+        this.db = new TodoDB();
     }
-    
-    public void add(String task){
-        this.todos.add(task);
+
+    public void add(String task) {
+        db.add(task);
     }
-    
-    public void remove(int number){
-        this.todos.remove(number - 1);
+
+    public void remove(int id) {
+        db.removeById(id);
     }
-    
-    public void print(){
-        for(String todo : todos){
+
+    public void print() {
+        List<String> todos = db.findAll();
+        for (String todo : todos) {
             System.out.println((todos.indexOf(todo) + 1) + ": " + todo);
         }
     }
